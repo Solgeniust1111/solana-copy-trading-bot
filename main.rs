@@ -58,12 +58,6 @@ async fn main() {
 // Listen all events with websocket
 
 pub async fn swap_to_events(mint: String, amount_in: f64, dirs: String) {
-    let rpc_client = create_rpc_client().unwrap();
-    let rpc_nonblocking_client = create_nonblocking_rpc_client().await.unwrap();
-    let wallet = import_wallet().unwrap();
-    let in_type = "qty";
-    let slippage = import_env_var("SLIPPAGE").parse::<u64>().unwrap_or(5);
-    let use_jito = true;
 
     let start_time = Instant::now();
     let (pool_id, pool_state) = match get_pool_state_by_mint(rpc_client.clone(), &mint).await {
@@ -84,15 +78,10 @@ pub async fn swap_to_events(mint: String, amount_in: f64, dirs: String) {
     println!("start swap ellapsed: {:?}", start_time.elapsed());
 
     // contact me
-    let res = raydium_swap(
-        state,
+    let res = jup_swap(
         amount_in.clone(),
         &dirs,
-        in_type,
-        slippage,
-        use_jito,
-        pool_id,
-        pool_state,
+        mint
     )
     .await;
     println!("res: {:#?}", res);
