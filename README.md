@@ -36,3 +36,5 @@ This bot is made using native Rust to speed up
 
 ## In additional you might mornitor token price all time
 
+## In additional you can use this tool just copy-trading-bot.exe comfortable
+
