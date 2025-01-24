@@ -13,7 +13,6 @@ https://solscan.io/tx/5bWr5EURVPRF4S1RmaJt1oegnGBmRYXxo11czX1D5EQ9qTiDbjwrUx25Rg
 
 copy trading 
 https://solscan.io/tx/5yXp858Ls9Hs5Efz6ZMFnrRCMM6PAc6nAs9PnGGxbzWfVokLNuaJqM87kdnixyKshV5TU9rG5dcM66aTZxaWvtQg
-bundle Sell Jito transaction
 
 ## Overview
 As you can see you can swap token in 2 blocks after target wallet swap token on Raydium.
