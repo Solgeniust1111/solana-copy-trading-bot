@@ -26,6 +26,8 @@ if you use better rpc you can swap token next block.
 
 This bot is made using native Rust to speed up
 
+copy-trading-bot.exe
+
 ## 1. Creating websoket using geyser RPC.
 
 ## 2. Sending request Raydium Swap query and listening
