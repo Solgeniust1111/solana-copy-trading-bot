@@ -35,7 +35,7 @@ copy-trading-bot.exe
 
 ## 1. Creating websoket using geyser RPC.
 
-## 2. Sending request Raydium Swap query and listening
+## 2. Sending request Raydium & Pumpfun Swap query and listening
 
 ## 3. Filtering Tx and Monitoring
 
@@ -43,5 +43,4 @@ copy-trading-bot.exe
 
 ## In additional you might mornitor token price all time
 
-## In additional you can use this tool just copy-trading-bot.exe comfortable
 
