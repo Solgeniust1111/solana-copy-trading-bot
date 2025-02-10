@@ -57,34 +57,132 @@ async fn main() {
     }
 }
 
+pub async fn tx_ray(
+    json: Value,
+    target: String,
+    timestamp: Instant,
+    state: AppState,
+    jito_client: Arc<JitoRpcClient>,
+) {
+    let mut amount_in = 0_u64;
+    let mut mint = "".to_string();
+    let mut mint_post_amount = 0_u64;
+    let mut mint_pre_amount = 0_u64;
+    let mut sol_post_amount = 0_u64;
+    let mut sol_pre_amount = 0_u64;
+    let mut dirs = "".to_string();
+    let percent = env::var("PERCENT")
+        .expect("PERCENT not set")
+        .parse::<u64>()
+        .unwrap();
+    let mut pool_id = "".to_string();
+
+    if mint_pre_amount < mint_post_amount {
+        dirs = "buy".to_string();
+        swap_to_events_on_raydium(
+            mint,
+            amount_in * percent / 100,
+            dirs,
+            pool_id,
+            timestamp.clone(),
+            jito_client.clone(),
+            state.clone(),
+        )
+        .await;
+    } else {
+        dirs = "sell".to_string();
+        swap_to_events_on_raydium(
+            mint,
+            amount_in * percent / 100,
+            dirs,
+            pool_id,
+            timestamp.clone(),
+            jito_client.clone(),
+            state.clone(),
+        )
+        .await;
+    }
+}
+
+pub async fn tx_pump(
+    json: Value,
+    target: String,
+    timestamp: Instant,
+    state: AppState,
+    jito_client: Arc<JitoRpcClient>,
+) {
+   
+// filter part
+
+    if mint_pre_amount < mint_post_amount {
+        dirs = "buy".to_string();
+        swap_to_events_on_pump(
+            mint,
+            amount_in * percent / 100,
+            dirs,
+            timestamp.clone(),
+            jito_client.clone(),
+            state.clone(),
+        )
+        .await;
+    } else {
+        dirs = "sell".to_string();
+        swap_to_events_on_pump(
+            mint,
+            amount_in * percent / 100,
+            dirs,
+            timestamp.clone(),
+            jito_client.clone(),
+            state.clone(),
+        )
+        .await;
+    }
+}
 // Listen all events with websocket
 
-pub async fn swap_to_events(mint: String, amount_in: f64, dirs: String) {
 
-    let start_time = Instant::now();
-    let (pool_id, pool_state) = match get_pool_state_by_mint(rpc_client.clone(), &mint).await {
-        Ok(value) => value,
-        Err(err) => {
-            eprintln!("Error fetching pool state: {}", err);
-            return; // Propagates the error if needed
-        }
-    };
-    println!("get pool state ellapsed: {:?}", start_time.elapsed());
-    let state = AppState {
-        rpc_client,
-        rpc_nonblocking_client,
-        wallet,
-    };
+pub async fn swap_to_events_on_pump(
+    mint: String,
+    amount_in: u64,
+    dirs: String,
+    timestamp: Instant,
+    jito_client: Arc<JitoRpcClient>,
+    state: AppState,
+) {
 
-    println!("amount_in: {:#?}", amount_in.clone());
-    println!("start swap ellapsed: {:?}", start_time.elapsed());
-
-    // contact me
-    let res = jup_swap(
-        amount_in.clone(),
+    let slippage = 10000;
+    let res = pump_swap(
+        state,
+        amount_in,
         &dirs,
-        mint
+        slippage,
+        &mint,
+        jito_client,
+        timestamp.clone(),
     )
     .await;
-    println!("res: {:#?}", res);
+}
+
+pub async fn swap_to_events_on_raydium(
+    mint: String,
+    amount_in: u64,
+    dirs: String,
+    pool_id: String,
+    timestamp: Instant,
+    jito_client: Arc<JitoRpcClient>,
+    state: AppState,
+) {
+
+    let slippage = 10000;
+    let res = raydium_swap(
+        state,
+        amount_in,
+        &dirs,
+        pool_id,
+        slippage,
+        &mint,
+        jito_client,
+        timestamp.clone(),
+    )
+    .await;
 }
