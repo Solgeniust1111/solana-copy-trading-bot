@@ -15,14 +15,19 @@ copy trading
 https://solscan.io/tx/5yXp858Ls9Hs5Efz6ZMFnrRCMM6PAc6nAs9PnGGxbzWfVokLNuaJqM87kdnixyKshV5TU9rG5dcM66aTZxaWvtQg
 
 target wallet trading
-https://solscan.io/tx/471vhEXj6gcWXe8MDHtpWqKPRky5LTnU7QBnoVZiM4WPx7MgTYVRRGgtPVz8vApBaKcPu8bpbJbEYSnMmV2Hcjqf
+https://solscan.io/tx/NtHJirXwgjKKNY5xVfRQNUDsoz84tM1FH5sSAgvBsuLtM9Ji8kaev6wfZXWmsWMZd9aGpNzEDAi6enyb7BLjPsZ
 
 copy trading
-https://solscan.io/tx/2Rwm7v6CSiiLzSXeyk5kbs5oZ8zC2egULK9BFAL7RpbduK3KbRb8RzkrdBt89jmrm4B6vJaynmkLh7NDPpNmDDDU
+https://solscan.io/tx/3dwQCF7hKrFr8z6qhAnSAHoUnp8icwaNXAsjARXeYM38gkJwDaWvqwXQbriJdunYoMjek2kNc4LcWKkh5zvV3eiW
+
+target Wallet trading
+https://solscan.io/tx/4hp7TkucGtKd6xZmFXUyu11chez57p6LwnJgT1QbptZfRS6oPnMqJ8oojQ6tyonB9SJ4QJWJNS8n3XZLeCp2j1Hf
+
+Copy trading
+https://solscan.io/tx/66ThSAJsyMU2NNsYxFJoeehYzXSUxXt8MRMVcsfPF3D6QrrsnUzHr37ht1MQQU1NYsaD5AKWozGcF5LhubyjtduY
 
 ## Overview
-As you can see you can swap token in 2 blocks after target wallet swap token.
-if you use better rpc you can swap token next block.
+As you can see you can swap token in 1 ~ 2 blocks after target wallet swap token.
 
 This bot is made using native Rust to speed up
 
