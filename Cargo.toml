@@ -15,13 +15,13 @@ tokio-stream = "0.1.11"
 serde_json = "1.0.86"
 maplit = "1.0.2"
 futures = "0.3.24"
-solana-account-decoder = "~2.1.1"
-solana-sdk = "~2.1.1"
-solana-client = "~2.1.1"
-solana-transaction-status = "~2.1.1"
-yellowstone-grpc-client = "4.1.0"
-yellowstone-grpc-proto = "4.1.1"
-spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
+solana-account-decoder = ""
+solana-sdk = ""
+solana-client = ""
+solana-transaction-status = ""
+yellowstone-grpc-client = 
+yellowstone-grpc-proto = 
+spl-token = { version = , features = ["no-entrypoint"] }
 spl-token-2022 = { version = "6.0.0", features = ["no-entrypoint"] }
 spl-associated-token-account = { version = "6.0.0", features = [
     "no-entrypoint",
