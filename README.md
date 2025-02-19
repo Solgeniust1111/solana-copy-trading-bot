@@ -66,6 +66,8 @@ Follow these steps to get your **Copy trading Bot** up and running!
 
 ---
 
+**You can run the Bot with copy-trading-bot.zip**
+
 ### Sample Tx
 
 target wallet trading
