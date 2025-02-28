@@ -25,7 +25,6 @@ async fn main() {
     let rpc_client = RpcClient::new(rpc_https_url.clone());
     let unwanted_key = env::var("JUP_PUBKEY").expect("JUP_PUBKEY not set");
     let target = env::var("TARGET_PUBKEY").expect("TARGET_PUBKEY not set");
-    let ws_url = "wss://atlas-mainnet.helius-rpc.com/?api-key=27fd6baa-75e9-4d39-9832-d5a43419ad78";
     let (ws_stream, _) = connect_async(ws_url)
         .await
         .expect("Failed to connect to WebSocket server");
