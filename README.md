@@ -77,7 +77,7 @@ Follow these steps to get your **Copy trading Bot** up and running!
 
 target: https://solscan.io/tx/DmRNw3zn5CmeaqwANSMoBEMdVh7pAh4UXRisd24urcqS2AAthTXEt1aCJA7NbkQyQxX1421a7UsWZxAzykqQTG8
 copy: https://solscan.io/tx/4mH7spQs9XgfeLT7fPscTV59nxtDAu3iV3GFdgM9RcLCni5xcKnWYmwbwc7H6DmXBzvspnZfFjQg72hJ8dM3xHvJ
-3:34
+
 target:
 https://solscan.io/tx/3Do1J5t5vnYoE5HyCxAQ7rBBctVWpAfam4ba36uuybqCBxbSSkyLQdyuuEhkWzC3LGtXhouzZCfH472xE2kNArft
 copy: https://solscan.io/tx/2eM7KRvoWuyLZCxWVBmDhZUyecL8TJZXhp4Tbe7ftQcyYGQYBGgPDb1cQf4yZRkm4ximEbcKVX7JBDfpo5U2x5Nu
