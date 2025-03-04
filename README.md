@@ -4,6 +4,10 @@ Welcome to the ** Copy trading Bot **! This bot watches for target wallet (whale
 🌟 You can swap token in 1 ~ 2 blocks after target wallet swap.
 if you use node, you can swap in same block
 
+one block:  80%
+second block: 20%
+if you use dedicate node, you 'll be able to swap in same block
+
 ### 🎯 **Key Features**
 
 - 🛰️ **Real-time WebSocket Streaming**:
