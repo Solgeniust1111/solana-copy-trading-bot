@@ -25,7 +25,6 @@ if you use dedicate node, you 'll be able to swap in same block
   Using pumpfun program id and raydium module you can make copy trasaction.
 
 ---
-
 ## 🚀 **Getting Started**
 
 Follow these steps to get your **Copy trading Bot** up and running!
