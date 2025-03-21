@@ -1,7 +1,7 @@
 # 🚀 **Copy trading Bot using Rust**
 
 Welcome to the ** Copy trading Bot **! This bot watches for target wallet (whale) on the Solana blockchain in real-time, copy trading like target trading.
-🌟 You can swap token in 1 ~ 2 blocks after target wallet swap.
+🌟 You can swap token in 0 ~ 1 blocks after target wallet swap.
 if you use node, you can swap in same block
 
 one block:  80%
